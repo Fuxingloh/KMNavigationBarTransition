@@ -45,6 +45,7 @@
 - (void)km_viewDidAppear:(BOOL)animated {
     if (self.km_transitionNavigationBar) {
         self.navigationController.navigationBar.barTintColor = self.km_transitionNavigationBar.barTintColor;
+        self.navigationController.navigationBar.barStyle = self.km_transitionNavigationBar.barStyle;
         [self.navigationController.navigationBar setBackgroundImage:[self.km_transitionNavigationBar backgroundImageForBarMetrics:UIBarMetricsDefault] forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:self.km_transitionNavigationBar.shadowImage];
         
@@ -106,6 +107,7 @@
         bar.translucent = self.navigationController.navigationBar.translucent;
     }
     bar.barTintColor = self.navigationController.navigationBar.barTintColor;
+    bar.barStyle = self.navigationController.navigationBar.barStyle;
     [bar setBackgroundImage:[self.navigationController.navigationBar backgroundImageForBarMetrics:UIBarMetricsDefault] forBarMetrics:UIBarMetricsDefault];
     bar.shadowImage = self.navigationController.navigationBar.shadowImage;
     [self.km_transitionNavigationBar removeFromSuperview];
